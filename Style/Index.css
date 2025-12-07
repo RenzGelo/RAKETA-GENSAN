@@ -160,7 +160,7 @@ a {
 
 /* --- 4. Hero Section --- */
 .hero-section {
-    background: url(/Projects/Image/Court.jpg) no-repeat center center/cover;
+    background: url(../Image/Court.jpg) no-repeat center center/cover;
     flex-grow: 1; 
     min-height: 60vh;
     position: relative;
