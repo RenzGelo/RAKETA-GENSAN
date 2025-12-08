@@ -1,7 +1,7 @@
 :root {
-    --color-primary: #1C3A33; /* Dark Green */
-    --color-secondary: #E3D4A8; /* Light Gold/Tan */
-    --color-accent: #E1C16B; /* Brighter Gold for buttons */
+    --color-primary: #1C3A33; 
+    --color-secondary: #E3D4A8; 
+    --color-accent: #E1C16B; 
     --color-light: #FFFFFF;
     --color-dark: #333333;
 
@@ -35,7 +35,6 @@ a {
     color: inherit;
 }
 
-/* --- 1. Buttons and General Elements --- */
 .btn-primary {
     display: inline-block;
     padding: 12px 30px;
@@ -53,25 +52,7 @@ a {
     background-color: #D3B160;
 }
 
-/* --- 2. Top Bar --- */
-.top-bar {
-    background-color: var(--color-primary);
-    color: var(--color-secondary);
-    font-size: 0.85em;
-    padding: 8px 0;
-}
 
-.top-bar-content {
-    display: flex;
-    justify-content: flex-end;
-    gap: 15px;
-}
-
-.top-link {
-    white-space: nowrap;
-}
-
-/* --- 3. Header & Navigation (CSS Only Responsive) --- */
 .main-header {
     background-color: var(--color-primary);
     padding: 15px 0;
@@ -90,26 +71,24 @@ a {
     height: 50px;
 }
 
-/* 3.1 Mobile Controls */
-/* Hide the actual checkbox input */
+
 #nav-check {
     display: none;
 }
 
-/* Hamburger Icon Styling (Mobile Only) */
+
 .nav-toggle {
     background: none;
     border: none;
     color: var(--color-light);
     font-size: 1.5em;
     cursor: pointer;
-    display: block; /* Show on mobile */
-    order: 2; /* Position it correctly next to the logo on mobile */
+    display: block;
+    order: 2;
 }
 
-/* 3.2 Mobile Navigation Menu */
+
 .main-nav {
-    /* Mobile Default State: Hidden and takes up full width */
     position: absolute;
     top: 80px; 
     left: 0;
@@ -118,12 +97,11 @@ a {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-out;
-    order: 3; /* Push it below the logo/toggle on mobile */
+    order: 3;
 }
 
-/* CSS-ONLY TOGGLE: Show the menu when the checkbox is checked */
 #nav-check:checked ~ .main-nav {
-    max-height: 300px; /* Open the menu */
+    max-height: 300px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -158,8 +136,7 @@ a {
 }
 
 
-/* --- 4. Hero Section --- */
-.hero-section {
+.motto-section {
     background: url(../Image/Court.jpg) no-repeat center center/cover;
     flex-grow: 1; 
     min-height: 60vh;
@@ -171,7 +148,7 @@ a {
     text-align: center;
 }
 
-.hero-overlay {
+.motto-overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -183,30 +160,30 @@ a {
     justify-content: center;
 }
 
-.hero-content {
+.motto-content {
     padding: 20px;
 }
 
-.hero-badge {
+.Logo-motto {
     max-width: 150px;
     margin-bottom: 20px;
 }
 
-.hero-title {
+.motto-title {
     font-size: 2.5em;
     margin-bottom: 10px;
     font-weight: 700;
     text-transform: uppercase;
 }
 
-.hero-subtitle {
+.motto-subtitle {
     font-size: 1.2em;
     margin-bottom: 30px;
     font-weight: 300;
 }
 
 
-/* --- 5. Footer --- */
+
 .main-footer {
     background-color: var(--color-primary);
     padding: 20px 0;
@@ -230,23 +207,19 @@ a {
     gap: 15px;
 }
 
-/* --- 6. Media Queries for Desktop --- */
 
-/* Desktop State (768px and up) */
 @media (min-width: 768px) {
     
-    /* Header: Desktop State */
+
     .nav-toggle {
-        display: none; /* Hide hamburger menu on desktop */
+        display: none; 
     }
     
-    /* Hide the checkbox on desktop as well */
     #nav-check {
         display: none;
     }
 
     .main-nav {
-        /* Reset properties for horizontal desktop layout */
         position: static;
         max-height: none;
         overflow: visible;
@@ -255,7 +228,7 @@ a {
     }
     
     .nav-list {
-        flex-direction: row; /* Horizontal layout */
+        flex-direction: row; 
         gap: 25px;
         padding: 0;
     }
@@ -275,20 +248,18 @@ a {
         background-color: transparent;
     }
 
-    /* Hero */
-    .hero-section {
+    .motto-section {
         min-height: 70vh;
     }
-    .hero-title {
+    .motto-title {
         font-size: 3.5em;
     }
 
-    /* Footer */
     .footer-content {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        text-align: left;
+        text-align: center;
     }
 
     .footer-nav {

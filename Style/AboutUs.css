@@ -1,17 +1,10 @@
-/*
-==================================================
-RAKETA TENNIS CLUB - COMPLETE STYLESHEET
-==================================================
-*/
 
-/* --- 0. Global Reset and Variables --- */
 :root {
-    --color-primary: #1C3A33; /* Dark Green */
-    --color-secondary: #E3D4A8; /* Light Gold/Tan */
-    --color-accent: #E1C16B; /* Brighter Gold for buttons */
+    --color-primary: #1C3A33;
+    --color-secondary: #E3D4A8;
+    --color-accent: #E1C16B; 
     --color-light: #FFFFFF;
     --color-dark: #333333;
-
     --font-sans: 'Arial', sans-serif; 
     --max-width: 1200px;
 }
@@ -27,7 +20,6 @@ body {
     line-height: 1.6;
     color: var(--color-dark);
     background-color: var(--color-light);
-    /* Flex properties to ensure footer sticks to the bottom of content */
     min-height: 100vh; 
     display: flex;
     flex-direction: column;
@@ -51,7 +43,6 @@ hr {
 }
 
 
-/* --- 1. Buttons and General Elements --- */
 .btn-primary {
     display: inline-block;
     padding: 12px 30px;
@@ -78,25 +69,8 @@ hr {
     text-align: center;
 }
 
-/* --- 2. Top Bar --- */
-.top-bar {
-    background-color: var(--color-primary);
-    color: var(--color-secondary);
-    font-size: 0.85em;
-    padding: 8px 0;
-}
 
-.top-bar-content {
-    display: flex;
-    justify-content: flex-end;
-    gap: 15px;
-}
 
-.top-link {
-    white-space: nowrap;
-}
-
-/* --- 3. Header & Navigation (CSS Only Responsive) --- */
 .main-header {
     background-color: var(--color-primary);
     padding: 15px 0;
@@ -115,26 +89,24 @@ hr {
     height: 50px;
 }
 
-/* 3.1 Mobile Controls */
-/* Hide the actual checkbox input */
+
 #nav-check {
     display: none;
 }
 
-/* Hamburger Icon Styling (Mobile Only) */
+
 .nav-toggle {
     background: none;
     border: none;
     color: var(--color-light);
     font-size: 1.5em;
     cursor: pointer;
-    display: block; /* Show on mobile */
+    display: block;
     order: 2;
 }
 
-/* 3.2 Mobile Navigation Menu */
+
 .main-nav {
-    /* Mobile Default State: Hidden and takes up full width */
     position: absolute;
     top: 80px; 
     left: 0;
@@ -146,7 +118,6 @@ hr {
     order: 3;
 }
 
-/* CSS-ONLY TOGGLE: Show the menu when the checkbox is checked */
 #nav-check:checked ~ .main-nav {
     max-height: 300px; /* Open the menu */
     border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -183,10 +154,9 @@ hr {
 }
 
 
-/* --- 4. Hero Section (Homepage) --- */
+
 .hero-section {
     background: url('hero-bg.jpg') no-repeat center center/cover;
-    /* Flex-grow allows it to fill the vertical space above the footer */
     flex-grow: 1; 
     min-height: 60vh;
     position: relative;
@@ -232,13 +202,12 @@ hr {
 }
 
 
-/* --- 5. Footer --- */
 .main-footer {
     background-color: var(--color-primary);
     padding: 20px 0;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     font-size: 0.85em;
-    flex-shrink: 0; /* Prevents footer from shrinking */
+    flex-shrink: 0; 
 }
 
 .footer-content {
@@ -257,7 +226,6 @@ hr {
 }
 
 
-/* --- 6. About Us Page Title Hero --- */
 .page-title-hero {
     background-color: var(--color-primary);
     color: var(--color-light);
@@ -275,7 +243,6 @@ hr {
     color: var(--color-secondary);
 }
 
-/* Main Content Area */
 .about-content {
     padding: 60px 20px;
     background-color: var(--color-light);
@@ -288,14 +255,13 @@ hr {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* --- 7. What's New Section --- */
 .whats-new-section {
     padding-bottom: 20px;
 }
 
 .update-grid {
     display: flex;
-    flex-direction: column; /* Stacked on mobile */
+    flex-direction: column; 
     gap: 30px;
     margin-bottom: 30px;
 }
@@ -353,14 +319,13 @@ hr {
     font-weight: bold;
 }
 
-/* --- 8. Core Identity Section (What Raketa Is About) --- */
 .identity-section {
     padding: 20px 0;
 }
 
 .identity-grid {
     display: flex;
-    flex-direction: column; /* Stacked on mobile */
+    flex-direction: column;
     gap: 30px;
     align-items: center;
 }
@@ -382,7 +347,6 @@ hr {
     max-width: 100%;
 }
 
-/* --- 9. Benefits Section (Why They Should Join) --- */
 .benefits-section {
     padding: 20px 0 60px 0;
     text-align: center;
@@ -390,14 +354,14 @@ hr {
 
 .benefits-grid {
     display: flex;
-    flex-direction: column; /* Stacked on mobile */
+    flex-direction: column;
     gap: 30px;
     margin-bottom: 40px;
 }
 
 .benefits-point {
     padding: 20px;
-    background-color: var(--color-primary); /* Dark Green Background */
+    background-color: var(--color-primary); 
     color: var(--color-light);
     border-radius: 8px;
     text-align: center;
@@ -405,7 +369,7 @@ hr {
 
 .benefit-icon {
     font-size: 2.5em;
-    color: var(--color-accent); /* Gold icon */
+    color: var(--color-accent); 
     margin-bottom: 10px;
     display: block;
 }
@@ -424,7 +388,7 @@ hr {
     text-align: center;
 }
 
-/* 9.1 Video Explainer Styles */
+
 .video-explainer-container {
     text-align: center;
     margin: 60px auto 40px auto;
@@ -439,7 +403,7 @@ hr {
 
 .video-responsive {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 ratio */
+    padding-bottom: 56.25%; 
     height: 0;
     overflow: hidden;
     max-width: 100%;
@@ -486,13 +450,10 @@ hr {
 }
 
 
-/* ==================================================
-    MEDIA QUERIES (Desktop Styles)
-================================================== */
 
 @media (min-width: 768px) {
     
-    /* Header: Desktop State */
+
     .nav-toggle {
         display: none; 
     }
@@ -530,7 +491,7 @@ hr {
         background-color: transparent;
     }
 
-    /* Hero */
+
     .hero-section {
         min-height: 70vh;
     }
@@ -538,7 +499,6 @@ hr {
         font-size: 3.5em;
     }
 
-    /* Footer */
     .footer-content {
         flex-direction: row;
         justify-content: space-between;
@@ -549,8 +509,7 @@ hr {
     .footer-nav {
         justify-content: flex-end;
     }
-    
-    /* About Us Page Layout */
+
     .page-title-hero {
         padding: 80px 20px;
     }
@@ -563,7 +522,6 @@ hr {
         text-align: left;
     }
 
-    /* What's New Grid */
     .update-grid {
         flex-direction: row; 
         flex-wrap: wrap;
@@ -574,7 +532,6 @@ hr {
         width: calc(33.333% - 20px);
     }
 
-    /* Identity Grid (Text on left, Image on right) */
     .identity-grid {
         flex-direction: row; 
         text-align: left;
@@ -588,7 +545,6 @@ hr {
         max-width: 50%;
     }
     
-    /* Benefits Grid (Two columns on tablet) */
     .benefits-grid {
         flex-direction: row;
         flex-wrap: wrap;
@@ -601,7 +557,6 @@ hr {
 }
 
 @media (min-width: 1024px) {
-    /* Benefits Grid (Four columns on desktop) */
     .benefits-point {
         width: calc(25% - 22px); 
     }
